@@ -3,13 +3,30 @@ export interface NavLink {
   href: string;
 }
 
-export interface Product {
-  id: string;
-  name: string;
-  price: number;
+export interface ProductCardProps {
   category: string;
-  image: string;
-  description?: string;
+  title: string;
+  description: string;
+  coverImage?: string;
+  date: string;
+  readTime?: string;
+  views?: number;
+  slug?: string;
+  tags?: string[];
+}
+
+export interface LatestCard {
+  coverImage?: { url: string };
+  title: string;
+  category?: { name: string };
+  tags?: string[];
+  shortDescription: string;
+  site: string;
+  type: string;
+  createdAt: string;
+  readTime?: string;
+  views?: number;
+  slug?: string;
 }
 
 export interface ApiResponse<T> {
